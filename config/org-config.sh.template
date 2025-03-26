@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Organization Unit Paths
+# Replace these with your organization's OU paths
+ORG_UNIT_EXTERNALS="/your-org-unit-path"
+ORG_UNIT_GENEEA="/your-org-unit-path/geneea"
+ORG_UNIT_NETHOST="/your-org-unit-path/nethost"
+ORG_UNIT_REVOLGY="/your-org-unit-path/revolgy"
+
+# Calendar IDs
+# Replace with your calendar ID
+CALENDAR_ID="your-calendar-id@group.calendar.google.com"
+
+# Export variables for use in other scripts
+export ORG_UNIT_EXTERNALS
+export ORG_UNIT_GENEEA
+export ORG_UNIT_NETHOST
+export ORG_UNIT_REVOLGY
+export CALENDAR_ID 
