@@ -52,19 +52,24 @@ cd google-workspace-admin-tools
 
 2. Configure your organization settings:
    ```bash
-   # Copy the template configuration file
-   cp config/org-config.sh.template config/org-config.sh
+   # Copy the example configuration:
+   cp config/org-config.example.sh config/org-config.sh
    
-   # Edit the configuration file with your organization's settings
-   nano config/org-config.sh
+   # Edit `config/org-config.sh` with your organization's settings:
+   # Organization Settings
+   ORG_DOMAIN="your-domain.com"
+   ORG_NAME="Your Organization Name"
+   ORG_UNIT_ROOT="/External Users"  # Root OU for external users
+   
+   # External Organization OUs
+   ORG_UNIT_EXTERNALS="/External Users"  # Main external users OU
+   ORG_UNIT_GENEEA="/External Users/External Org 1"  # First external organization
+   ORG_UNIT_NETHOST="/External Users/External Org 2"  # Second external organization
+   ORG_UNIT_REVOLGY="/External Users/External Org 3"  # Third external organization
+   
+   # Calendar Settings
+   CALENDAR_ID="your-calendar-id@group.calendar.google.com"
    ```
-
-   Update the following variables in `config/org-config.sh`:
-   - `ORG_UNIT_EXTERNALS`: Your organization's external users OU path
-   - `ORG_UNIT_GENEEA`: Path to Geneea sub-OU
-   - `ORG_UNIT_NETHOST`: Path to NetHost sub-OU
-   - `ORG_UNIT_REVOLGY`: Path to Revolgy sub-OU
-   - `CALENDAR_ID`: Your organization's calendar ID
 
 ## Usage
 
