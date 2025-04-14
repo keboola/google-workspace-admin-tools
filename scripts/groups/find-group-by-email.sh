@@ -89,7 +89,7 @@ gam_stderr_file=$(mktemp)
 gam_stdout_file=$(mktemp)
 
 # Run GAM and capture exit code
-if ! "$GAM" print groups aliases nodata > "$gam_stdout_file" 2> "$gam_stderr_file"; then
+if ! "$GAM" print groups aliases > "$gam_stdout_file" 2> "$gam_stderr_file"; then
     gam_exit_code=$?
     echo "Error running GAM command (Exit Code: $gam_exit_code):" >&2
     cat "$gam_stderr_file" >&2
